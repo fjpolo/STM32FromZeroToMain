@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "STM32 F0",
+            "name": "STM32F071x",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
@@ -10,12 +10,14 @@
                 "UNICODE",
                 "_UNICODE",
                 "USE_HAL_DRIVER",
-                "STM32F091xC"
-            ],
+                "STM32F071xB",
+                "USE_HAL_DRIVER",
+                "STM32F071xB"
+            ],           
             "intelliSenseMode": "gcc-arm",
-            "compilerPath": "${env:ARMGCC_DIR}/arm-none-eabi-gcc.exe",
+            "compilerPath": "${env:ARMGCC_DIR}/arm-none-eabi-gcc.exe", 
             "compilerArgs": [
-                "-mcpu=cortex-m0",
+                "-mcpu=cortex-m0", 
                 "-mthumb"
             ],
             "cStandard": "c11",

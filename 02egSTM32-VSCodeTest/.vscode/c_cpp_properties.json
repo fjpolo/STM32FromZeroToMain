@@ -13,9 +13,7 @@
                 "STM32F071xB",
                 "USE_HAL_DRIVER",
                 "STM32F071xB"
-            ],
-            "windowsSdkVersion": "10.0.19041.0",
-            
+            ],           
             "intelliSenseMode": "gcc-arm",
             "compilerPath": "${env:ARMGCC_DIR}/arm-none-eabi-gcc.exe", 
             "compilerArgs": [

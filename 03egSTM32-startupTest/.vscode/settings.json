@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "system_stm32f0xx.h": "c",
-        "stm32f0xx.h": "c"
-    }
-}

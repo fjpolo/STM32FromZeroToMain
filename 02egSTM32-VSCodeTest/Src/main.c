@@ -29,7 +29,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -68,6 +68,10 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart2;
+char* message = "Hello World!\r\n";
+
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -106,7 +110,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  char* message[] = "Hello World!\r\n";
   while (1)
   {
     /* USER CODE END WHILE */
@@ -116,6 +119,9 @@ int main(void)
     /*Blinky yo*/
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
     HAL_Delay(500);
+    /*USART*/
+    HAL_UART_Transmit(&huart1, (uint8_t*)message, strlen(message), 100);
+
 
   }
   /* USER CODE END 3 */
