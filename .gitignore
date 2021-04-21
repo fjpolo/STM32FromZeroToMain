@@ -6,3 +6,6 @@ tools/
 
 #Ignore Drivers, let CubeMX generate them
 Drivers/
+
+#
+.cortex-debug*
