@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F071x",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_HAL_DRIVER",
+                "STM32F071xB",
+                "USE_HAL_DRIVER",
+                "STM32F071xB"
+            ],           
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "${env:ARMGCC_DIR}/arm-none-eabi-gcc.exe", 
+            "compilerArgs": [
+                "-mcpu=cortex-m0", 
+                "-mthumb"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}
