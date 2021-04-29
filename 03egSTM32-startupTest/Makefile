@@ -30,6 +30,7 @@ OPT = -Og
 #######################################
 # Build path
 BUILD_DIR = build
+TEMP_DIR = output
 
 ######################################
 # source
@@ -144,6 +145,12 @@ endif
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 
+#
+# gcc $(CFLAGS) $@ file.c
+
+# Keep temporary files *.i and *.s
+CFLAGS += -save-temps=obj
+# -use-asm
 
 #######################################
 # LDFLAGS

@@ -1,0 +1,34 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            //Compile
+            "label": "Build Target",
+            "type": "shell",
+            "command": "make",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+                         //Delete first and then compile
+            "label": "Rebuild Target",
+            "type": "shell",
+            "command": "rm -rf build && make",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+                         //Compile and download
+            "label": "Build and Download",
+            "type": "shell",
+            "command": "make && cp build/build_pro.hex Debugger/AutoDownload/bin/target.hex && cd Debugger/AutoDownload/bin/ && ./Stlink_write_image.bat",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

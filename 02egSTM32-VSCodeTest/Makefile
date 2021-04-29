@@ -143,6 +143,9 @@ endif
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 
+# Keep temporary files
+CFLAGS += -save-temps=obj 
+# -use-asm
 
 #######################################
 # LDFLAGS
